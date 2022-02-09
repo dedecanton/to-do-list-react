@@ -9,11 +9,11 @@ export const Header = styled.header`
 
 export const Container = styled.div`
   margin: 0 auto;
+  max-width: 1440px;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 95%;
-  max-width: 1440px;
 `;
 
 export const HeaderLogo = styled.h1`
