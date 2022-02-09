@@ -26,8 +26,11 @@ export const Container = styled.div(
 
 
     label{
+        width: 80%;
+        text-align: justify;
         text-decoration: ${done ? 'line-through' : 'initial'};
         margin-left: .5rem;
+        word-break: break-word;
     }
 
     button{
