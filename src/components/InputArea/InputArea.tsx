@@ -12,7 +12,11 @@ const InputArea = ({ onAddTask }: Props) => {
   //     setInputContent(e.target.value)
   // }
 
+
+
   const handleSubmit = () => {
+    if(!(inputContent.trim().length > 0)) return
+
     onAddTask(inputContent);
     setInputContent("");
   };
