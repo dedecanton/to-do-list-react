@@ -10,7 +10,6 @@ export const Container = styled.div(
     width: 90%;
     margin: 1rem auto;
     padding: 1rem;
-    // box-shadow: 0 4px 10px -5px rgba(0,0,0, .3);
     border-bottom: 1px solid rgba(0,0,0,.5);
     border-radius: .5rem;
     display: flex;
