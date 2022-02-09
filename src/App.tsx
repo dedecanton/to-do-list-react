@@ -11,7 +11,6 @@ import InfoArea from "./components/InfoArea";
 
 function App() {
   // States
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
   const [taskList, setTaskList] = useState<ListItemType[]>([]);
 
   useEffect(() => {
@@ -29,10 +28,6 @@ function App() {
   useEffect(updateLocalStorage, [taskList]);
 
   // Handlers
-  const handleThemeChange = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
-
   const handleAddTask = (text: string) => {
     const newTask = {
       name: text,
@@ -61,7 +56,7 @@ function App() {
   // App
   return (
     <>
-      <Header isDark={isDarkTheme} changeTheme={handleThemeChange} />
+      <Header/>
       <InputArea onAddTask={handleAddTask} />
       <InfoArea taskList={taskList} />
       <ListArea
