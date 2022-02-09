@@ -28,12 +28,12 @@ const InputArea = ({ onAddTask }: Props) => {
     <C.Container>
       <C.Input
         type="text"
-        placeholder="Task description..."
+        placeholder="Descrição da tarefa..."
         value={inputContent}
         onChange={(e) => setInputContent(e.target.value)}
         onKeyPress={handleKeyUp}
       />
-      <C.Button onClick={handleSubmit}>Add Task</C.Button>
+      <C.Button onClick={handleSubmit}>Adicionar</C.Button>
     </C.Container>
   );
 };
