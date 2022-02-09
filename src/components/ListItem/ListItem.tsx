@@ -29,7 +29,7 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
         onChange={handleCheck}
       />
       <label htmlFor={item.id}>{item.name}</label>
-      <button onClick={handleRemove}>Remover</button>
+      <button onClick={handleRemove}>Remover da lista</button>
     </C.Container>
   );
 };
