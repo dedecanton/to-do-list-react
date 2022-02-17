@@ -24,6 +24,7 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
 
   return (
     <C.Container done={item.done}>
+      
       <input
         type="checkbox"
         checked={item.done}
