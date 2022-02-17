@@ -38,17 +38,19 @@ function App() {
     setTaskList((prevTasks) => [...prevTasks, newTask]);
   };
 
+  const findIndexById = (array:ListItemType[], id:string) => array.findIndex(item => item.id === id)
+
   const handleChangeTask = (id: string, done: boolean) => {
     let newList = [...taskList];
-    newList.forEach((item) =>
-      item.id === id ? (item.done = done) : item.done
-    );
+    const index = findIndexById(newList, id)
+    newList[index].done = done
+    // newList[findIndexById(newList, id)].done = done
     setTaskList(newList);
   };
 
   const handleRemoveTask = (id: string) => {
     let newList = [...taskList];
-    const index = newList.findIndex((item) => item.id === id);
+    const index = findIndexById(newList, id)
     newList.splice(index, 1);
     setTaskList(newList);
   };
