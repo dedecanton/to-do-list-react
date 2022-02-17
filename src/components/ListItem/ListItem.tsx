@@ -10,11 +10,7 @@ type Props = {
 };
 
 const ListItem = ({ item, onChange, onRemove }: Props) => {
-  const styleButton = `
-  padding: .5rem 1rem;
-  position: absolute;
-  right:2%;
-  `;
+
 
   const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.checked;
@@ -36,10 +32,8 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
         onChange={handleCheck}
       />
       <label htmlFor={item.id}>{item.name}</label>
-      {/* <button onClick={handleRemove}>Remover da lista</button> */}
       <Button
         text="Remover da lista"
-        aditionalStyles={styleButton}
         onClick={handleRemove}
       />
     </C.Container>

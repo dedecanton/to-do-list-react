@@ -31,5 +31,12 @@ export const Container = styled.div(
         margin-left: .5rem;
         word-break: break-word;
     }
+
+    // aditional styled button component
+    button{
+        padding: .5rem 1rem;
+        position: absolute;
+        right:2%;
+    }
     `
 );

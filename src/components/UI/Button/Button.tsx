@@ -1,14 +1,13 @@
 import * as C from './Button.style'
 
 type ButtonType = {
-    aditionalStyles: string,
     text: string,
     onClick: () => void
 }
 
-const Button = ({aditionalStyles, text, onClick}:ButtonType) => {
+const Button = ({text, onClick}:ButtonType) => {
     return(
-        <C.Button onClick={onClick} aditionalStyles={aditionalStyles}>{text}</C.Button>
+        <C.Button onClick={onClick}>{text}</C.Button>
     )
 }
 
