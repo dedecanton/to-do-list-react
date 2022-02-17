@@ -27,25 +27,3 @@ export const Input = styled.input`
     width:70%
   }
 `;
-
-export const Button = styled.button`
-  width: 10rem;
-  margin: 0.5rem;
-  padding: 1rem;
-  background-color: black;
-  color: #fff;
-  outline: 0;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: all ease 0.3s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  @media(min-width: 980px){
-    width:20rem;
-    margin-left: 1rem
-  }
-`;

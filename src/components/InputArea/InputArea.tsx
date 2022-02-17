@@ -1,5 +1,6 @@
 import React, { KeyboardEvent, useState } from "react";
 import * as C from "./InputArea.style";
+import Button from "../UI/Button";
 
 type Props = {
   onAddTask: (text: string) => void;
@@ -8,14 +9,19 @@ type Props = {
 const InputArea = ({ onAddTask }: Props) => {
   const [inputContent, setInputContent] = useState("");
 
-  // const handleInputContent = (e:React.ChangeEvent<HTMLInputElement>) => {
-  //     setInputContent(e.target.value)
-  // }
+  const styleButton = `
+  width: 10rem;
+  margin: 0.5rem;
+  padding: 1rem;
 
-
+  @media(min-width: 980px){
+    width:20rem;
+    margin-left: 1rem
+  }
+  `;
 
   const handleSubmit = () => {
-    if(!(inputContent.trim().length > 0)) return
+    if (!(inputContent.trim().length > 0)) return;
 
     onAddTask(inputContent);
     setInputContent("");
@@ -37,7 +43,11 @@ const InputArea = ({ onAddTask }: Props) => {
         onChange={(e) => setInputContent(e.target.value)}
         onKeyPress={handleKeyUp}
       />
-      <C.Button onClick={handleSubmit}>Adicionar</C.Button>
+      <Button
+        aditionalStyles={styleButton}
+        onClick={handleSubmit}
+        text="Adicionar"
+      />
     </C.Container>
   );
 };

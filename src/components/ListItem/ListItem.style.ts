@@ -31,21 +31,5 @@ export const Container = styled.div(
         margin-left: .5rem;
         word-break: break-word;
     }
-
-    button{
-        border: none;
-        background-color:black;
-        color: white;
-        padding: .5rem 1rem;
-        border-radius: 0.5rem;
-        position: absolute;
-        right:2%;
-        cursor: pointer;
-        transition: all ease .3s;
-    }
-
-    button:hover{
-        transform: scale(1.1);
-    }
     `
 );
