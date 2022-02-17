@@ -1,13 +1,9 @@
 import styled from "styled-components";
+import ContainerStyle from "../UI/Container";
 
-export const Container = styled.div`
-  margin: 1rem auto;
-  max-width: 950px;
-  width: 95%;
-  display: flex;
+export const Container = styled(ContainerStyle)`
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 
   @media (min-width: 980px) {
     flex-direction: row;

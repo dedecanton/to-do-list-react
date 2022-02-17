@@ -2,9 +2,6 @@ import * as C from "./Header.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faList } from "@fortawesome/free-solid-svg-icons";
 
-
-
-
 const Header = () => {
   return (
     <C.Header>

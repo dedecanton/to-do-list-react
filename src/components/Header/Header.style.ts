@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ContainerStyle from "../UI/Container";
 
 export const Header = styled.header`
   background: transparent;
@@ -7,7 +8,7 @@ export const Header = styled.header`
   padding: 1rem;
 `;
 
-export const Container = styled.div`
+export const Container = styled(ContainerStyle)`
   margin: 0 auto;
   max-width: 1440px;
   width: 95%;

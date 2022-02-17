@@ -1,16 +1,14 @@
 import styled from "styled-components";
+import ContainerStyle from "../UI/Container";
 
-export const Container = styled.div`
-  margin: 1rem auto;
+export const Container = styled(ContainerStyle)`
   max-width: 300px;
   width: 80%;
   background-color: black;
   color: white;
   padding: 1rem;
   border-radius: .5rem;
-  display: flex;
   justify-content:center;
-  align-items:center;
 
   table{
     border:none;

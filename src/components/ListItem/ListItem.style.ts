@@ -1,20 +1,20 @@
 import styled from "styled-components";
+import ContainerStyle from "../UI/Container";
 
 type ContainerProps = {
   done: boolean;
 };
 
-export const Container = styled.div(
+
+export const Container = styled(ContainerStyle)(
   ({ done }: ContainerProps) =>
     `
-    width: 90%;
-    margin: 1rem auto;
+    
     padding: 1rem;
     border-bottom: 1px solid rgba(0,0,0,.5);
     border-radius: .5rem;
-    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content:initial;
     position: relative;
     text-align:center;
 
