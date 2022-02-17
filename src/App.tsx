@@ -20,7 +20,7 @@ function App() {
       setTaskList(data);
     }
   }, []);
-  
+
   // LocalStorage Management
   const updateLocalStorage = () => {
     localStorage.setItem("listTask", JSON.stringify(taskList));
@@ -56,7 +56,7 @@ function App() {
   // App
   return (
     <>
-      <Header/>
+      <Header />
       <InputArea onAddTask={handleAddTask} />
       <InfoArea taskList={taskList} />
       <ListArea

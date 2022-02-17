@@ -10,8 +10,6 @@ type Props = {
 };
 
 const ListItem = ({ item, onChange, onRemove }: Props) => {
-
-
   const handleCheck = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.checked;
     const id = item.id;
@@ -24,7 +22,6 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
 
   return (
     <C.Container done={item.done}>
-      
       <input
         type="checkbox"
         checked={item.done}
@@ -33,10 +30,7 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
         onChange={handleCheck}
       />
       <label htmlFor={item.id}>{item.name}</label>
-      <Button
-        text="Remover da lista"
-        onClick={handleRemove}
-      />
+      <Button text="Remover da lista" onClick={handleRemove} />
     </C.Container>
   );
 };
