@@ -1,14 +1,14 @@
 import * as C from "./InfoArea.style";
-import {ListItemType} from '../../types/ListItem.type'
+import { ListItemType } from "../../types/ListItem.type";
 
-type Props={
-    taskList: ListItemType[]
-}
+type Props = {
+  taskList: ListItemType[];
+};
 
-const InfoArea = ({taskList}:Props) => {
+const InfoArea = ({ taskList }: Props) => {
 
-
-
+  const taskListFilter = (state:boolean) => taskList.filter((task) => task.done === state).length;
+    
   return (
     <C.Container>
       <table>
@@ -21,8 +21,8 @@ const InfoArea = ({taskList}:Props) => {
 
         <tbody>
           <tr>
-            <td>{taskList.filter(task => task.done === false).length}</td>
-            <td>{taskList.filter(task => task.done === true).length}</td>
+            <td>{taskListFilter(false)}</td>
+            <td>{taskListFilter(true)}</td>
           </tr>
         </tbody>
       </table>
