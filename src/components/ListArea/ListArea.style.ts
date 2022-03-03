@@ -8,6 +8,10 @@ export const Container = styled(ContainerStyle)`
   border-radius: 0.5rem;
   padding: 1rem;
 
+  ul{
+    width: 100%
+  }
+
   h2{
     color: black;
     font-size: 1.2rem;

@@ -5,26 +5,36 @@ import ListItem from "../ListItem";
 import { ListItemType } from "../../types/ListItem.type";
 
 type Props = {
-  taskList: ListItemType[]
-  onTaskChange: (id:string, done:boolean) => void
-  onTaskRemove: (id:string) => void
+  taskList: ListItemType[];
+  onTaskChange: (id: string, done: boolean) => void;
+  onTaskRemove: (id: string) => void;
 };
 
-const ListArea = ({ taskList, onTaskChange, onTaskRemove}: Props) => {
-    
-    const onChange = (id:string, done:boolean) => {
-        onTaskChange(id,done)
-    }
+const ListArea = ({ taskList, onTaskChange, onTaskRemove }: Props) => {
+  const onChange = (id: string, done: boolean) => {
+    onTaskChange(id, done);
+  };
 
-    const onRemove = (id:string) => {
-        onTaskRemove(id)
-    }
+  const onRemove = (id: string) => {
+    onTaskRemove(id);
+  };
 
   return (
     <C.Container>
-      {taskList.length > 0 ? taskList.map((task, index) => (
-        <ListItem onRemove={onRemove} onChange={onChange} key={index} item={task} />
-      )) : <h2>Nenhuma tarefa cadastrada</h2>}
+      {taskList.length > 0 ? (
+        <ul>
+          {taskList.map((task, index) => (
+            <ListItem
+              onRemove={onRemove}
+              onChange={onChange}
+              key={index}
+              item={task}
+            />
+          ))}
+        </ul>
+      ) : (
+        <h2>Nenhuma tarefa cadastrada</h2>
+      )}
     </C.Container>
   );
 };
