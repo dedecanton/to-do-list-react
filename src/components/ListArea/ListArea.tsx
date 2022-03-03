@@ -22,16 +22,14 @@ const ListArea = ({ taskList, onTaskChange, onTaskRemove }: Props) => {
   return (
     <C.Container>
       {taskList.length > 0 ? (
-        <ul>
-          {taskList.map((task, index) => (
-            <ListItem
-              onRemove={onRemove}
-              onChange={onChange}
-              key={index}
-              item={task}
-            />
-          ))}
-        </ul>
+        taskList.map((task, index) => (
+          <ListItem
+            onRemove={onRemove}
+            onChange={onChange}
+            key={index}
+            item={task}
+          />
+        ))
       ) : (
         <h2>Nenhuma tarefa cadastrada</h2>
       )}

@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import ContainerStyle from "../UI/Container";
 
-export const Container = styled(ContainerStyle)`
+export const Container = styled.ul`
+  box-sizing: border-box;
+  margin: 1rem auto;
+  max-width:  900px;
+  width: 95%;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   box-shadow: 1px 1px 6px rgb(0 0 0 / 80%);
