@@ -5,10 +5,7 @@ type ContainerProps = {
   done: boolean;
 };
 
-
-export const Container = styled(ContainerStyle)(
-  ({ done }: ContainerProps) =>
-    `
+export const Container = styled(ContainerStyle)`
     
     padding: 1rem;
     border-bottom: 1px solid rgba(0,0,0,.5);
@@ -28,7 +25,7 @@ export const Container = styled(ContainerStyle)(
     label{
         margin: .5rem auto;
         text-align: center;
-        text-decoration: ${done ? "line-through" : "initial"};
+        text-decoration: ${({done}:ContainerProps) => done ? "line-thorough" : "initial"};
         word-break: break-word;
     }
 
@@ -62,5 +59,4 @@ export const Container = styled(ContainerStyle)(
             margin-top: 0;
         }
     }
-    `
-);
+`
