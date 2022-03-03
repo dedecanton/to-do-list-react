@@ -21,7 +21,7 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
   };
 
   return (
-    <C.Container done={item.done}>
+    <C.Container>
       <input
         type="checkbox"
         checked={item.done}
@@ -29,7 +29,7 @@ const ListItem = ({ item, onChange, onRemove }: Props) => {
         id={item.id}
         onChange={handleCheck}
       />
-      <label htmlFor={item.id}>{item.name}</label>
+      <label className={item.done ? 'checked' : ''} htmlFor={item.id}>{item.name}</label>
       <Button text="Remover da lista" onClick={handleRemove} />
     </C.Container>
   );

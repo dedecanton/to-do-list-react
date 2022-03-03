@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import ContainerStyle from "../UI/Container";
 
-type ContainerProps = {
-  done: boolean;
-};
-
-export const Container = styled(ContainerStyle)`
-    
+export const Container = styled.li`
+    box-sizing: border-box;
+    margin: 1rem auto;
+    max-width: 900px;
+    width: 95%;
+    display: flex;
+    align-items: center;
     padding: 1rem;
     border-bottom: 1px solid rgba(0,0,0,.5);
     border-radius: .5rem;
@@ -25,8 +25,11 @@ export const Container = styled(ContainerStyle)`
     label{
         margin: .5rem auto;
         text-align: center;
-        text-decoration: ${({done}:ContainerProps) => done ? "line-thorough" : "initial"};
         word-break: break-word;
+    }
+
+    label.checked{
+        text-decoration: line-through;
     }
 
     // aditional styled button component
